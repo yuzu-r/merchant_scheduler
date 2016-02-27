@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class SubscriberControllerTest < ActionController::TestCase
+class SubscribersControllerTest < ActionController::TestCase
   test "should get home" do
     get :home
     assert_response :success
