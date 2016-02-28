@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   
+  resources :merchants
   #get 'static_pages/contact'
   get 'contact' => 'static_pages#contact'
   #get 'static_pages/help'
   get 'help' => 'static_pages#help'
-  get 'subscriber' => 'subscribers#home'
+#  get 'subscriber' => 'subscribers#home'
 
   root 'static_pages#home'
 
