@@ -18,9 +18,8 @@ class MerchantsControllerTest < ActionController::TestCase
 
   test "should create merchant" do
     assert_difference('Merchant.count') do
-      post :create, merchant: { name: @merchant.name }
+      post :create, merchant: { name: "Slim" }
     end
-
     assert_redirected_to merchant_path(assigns(:merchant))
   end
 

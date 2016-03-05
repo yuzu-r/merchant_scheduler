@@ -1,29 +1,41 @@
-<div class ="jumbotron center">
+<div class ="jumbotron">
   <p id="notice"><%= notice %></p>
 
-  <h2>Merchant Admin</h2>
+  <h3>Merchant Admin</h3>
 
-  <table>
+    <table class="merchant-table">
     <thead>
-      <tr>
-        <th>Name</th>
-        <th colspan="3"></th>
-      </tr>
+<!--       <tr>
+        <th>Merchant Admin</th>
+      </tr> -->
     </thead>
 
     <tbody>
       <% @merchants.each do |merchant| %>
         <tr>
-          <td><%= merchant.name %></td>
-          <td><%= link_to 'Show', merchant %></td>
-          <td><%= link_to 'Edit', edit_merchant_path(merchant) %></td>
-          <td><%= link_to 'Destroy', merchant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td class="merchant-name"><%= link_to "#{merchant.name}", merchant %></td>
+<!--           <td><div><span class="input-group-btn">
+            <button class="btn btn-default btn-sm"><i class="glyphicon glyphicon-pencil"></i>
+            </button>
+          </span>Edie</div></td>
+          <td><div><span class="input-group-btn">
+            <button class="btn btn-default btn-sm"><i class="glyphicon glyphicon-trash"></i>
+            </button>
+          </span></div></td> -->
+          <td class = "merchant-action"><%= link_to 'Edit', edit_merchant_path(merchant) %></td>
+          <td class = "merchant-action"><%= link_to 'Delete', merchant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
-
   <br>
 
-  <%= link_to 'New Merchant', new_merchant_path %>
 </div>
+
+<div class="footer-links">
+<%= link_to new_merchant_path do %>
+  <span class="glyphicon glyphicon-plus"></span> Add Merchant
+<% end %>
+</div>
+
+

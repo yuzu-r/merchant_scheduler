@@ -10,6 +10,7 @@ class MerchantsController < ApplicationController
   # GET /merchants/1
   # GET /merchants/1.json
   def show
+    @merchant = Merchant.find(params[:id])
   end
 
   # GET /merchants/new
@@ -19,6 +20,7 @@ class MerchantsController < ApplicationController
 
   # GET /merchants/1/edit
   def edit
+    @merchant = Merchant.find(params[:id])
   end
 
   # POST /merchants

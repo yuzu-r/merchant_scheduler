@@ -3,7 +3,6 @@
   <% if @merchant.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@merchant.errors.count, "error") %> prohibited this merchant from being saved:</h2>
-
       <ul>
       <% @merchant.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -12,12 +11,22 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+  <div class="form-group">
+    <%= f.label :name %> 
+    <%= f.text_field :name, class: "form-control" %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <%= f.submit "Save changes", class: "btn btn-primary" %>
   </div>
-<% end %>
+<!--     <label class="col-md-2 control-label" for="inputName" >Merchant Name</label>
+    <div class="col-md-6">
+      <input class="form-control" type="text" id="inputName" %>
+    </div>
+  
+    <div class="col-md-5">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+ -->    
+  
 
+<% end %>

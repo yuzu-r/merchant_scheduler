@@ -20,7 +20,7 @@ class MerchantTest < ActiveSupport::TestCase
 	end
 
 	test "name should be alphanumeric, space and dash only, at least one letter or number" do
-		invalid_merchant_names = %w[ - @@ ]
+		invalid_merchant_names = %w[ - @@ a##]
 		invalid_merchant_names.each do |invalid_name|
 			@merchant.name = invalid_name			
 			assert_not @merchant.valid?, "failing character tests"
