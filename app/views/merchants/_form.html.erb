@@ -2,7 +2,7 @@
 <%= form_for(@merchant) do |f| %>
   <% if @merchant.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@merchant.errors.count, "error") %> prohibited this merchant from being saved:</h2>
+      <h3><%= pluralize(@merchant.errors.count, "error") %> prohibited this merchant from being saved:</h3>
       <ul>
       <% @merchant.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -16,7 +16,7 @@
     <%= f.text_field :name, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.submit "Save changes", class: "btn btn-primary" %>
+    <%= f.submit "Submit", class: "btn btn-primary" %>
   </div>
 <!--     <label class="col-md-2 control-label" for="inputName" >Merchant Name</label>
     <div class="col-md-6">
