@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
   
-  #get 'users/new'
-
+  root 								'static_pages#home'
+  get 'help'	 		=> 	'static_pages#help'
+  get 'login'			=>	'sessions#new'
+  post 'login'		=>	'sessions#create'
+  delete 'login'	=>	'sessions#destroy'
+  
   resources :merchants
   resources :users
-  get 'help' => 'static_pages#help'
-  root 'static_pages#home'
-
 
 end
