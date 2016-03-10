@@ -1,0 +1,28 @@
+<div class ="jumbotron">
+  <p id="notice"><%= notice %></p>
+
+  <h3>User Admin</h3>
+
+    <table class="user-table">
+    <thead>
+    </thead>
+
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= link_to "#{user.name}", user %></td>
+          <td><%= link_to 'Edit', edit_user_path(user) %></td>
+          <td><%= link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+
+</div>
+
+<div class="footer-links">
+<%= link_to new_user_path do %>
+  <span class="glyphicon glyphicon-plus"></span> Add User
+<% end %>
+</div>
