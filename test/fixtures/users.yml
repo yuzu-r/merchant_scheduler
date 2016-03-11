@@ -4,3 +4,8 @@ ridiculous:
   name: Fixture Tester
   email: fixt1@example.com
   password_digest: <%= User.digest('password') %>
+
+sneaker:
+  name: Second Tester
+  email: sneak@example.com
+  password_digest: <%= User.digest('password') %>
