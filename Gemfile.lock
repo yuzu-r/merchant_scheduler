@@ -221,8 +221,8 @@ DEPENDENCIES
   turbolinks (= 2.3.0)
   uglifier (= 2.5.3)
   web-console (= 2.0.0.beta3)
-  will_paginate (~> 3.0.5)
-  will_paginate-bootstrap
+  will_paginate (= 3.0.7)
+  will_paginate-bootstrap (= 1.0.1)
 
 BUNDLED WITH
    1.10.6

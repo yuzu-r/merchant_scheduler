@@ -12,8 +12,8 @@ gem 'jquery-rails', '4.0.3'
 gem 'turbolinks',   '2.3.0'
 gem 'jbuilder',     '2.2.3'
 gem 'sdoc',         '0.4.0', group: :doc
-gem 'will_paginate', '~> 3.0.5'
-gem 'will_paginate-bootstrap'
+gem 'will_paginate', '3.0.7'
+gem 'will_paginate-bootstrap', '1.0.1'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'

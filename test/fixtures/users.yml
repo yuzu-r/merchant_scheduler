@@ -4,8 +4,29 @@ ridiculous:
   name: Fixture Tester
   email: fixt1@example.com
   password_digest: <%= User.digest('password') %>
+  admin: true
 
 sneaker:
   name: Second Tester
   email: sneak@example.com
+  password_digest: <%= User.digest('password') %>
+
+ichiro:
+  name: Ichiro Suzuki
+  email: ichiro@example.com
+  password_digest: <%= User.digest('password') %>
+
+threepio:
+  name: C3PO
+  email: c3po@example.com
+  password_digest: <%= User.digest('password') %>  
+
+artoo:
+  name: R2D2
+  email: r2d2@example.com
+  password_digest: <%= User.digest('password') %>
+
+chewie:
+  name: Chewbacca Wookiee
+  email: chewie@example.com
   password_digest: <%= User.digest('password') %>
