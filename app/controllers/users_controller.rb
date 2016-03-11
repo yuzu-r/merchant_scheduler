@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 	  if @user.save
 	  	 flash[:success] = "User successfully created."
-	    redirect_to @user
+	    redirect_to users_path
 	  else
 	    render 'new'
 	  end
@@ -19,6 +19,17 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+      flash[:success] = "User updated"
+      redirect_to @user
+    else
+      logger.debug 'edit had invalid data'
+      render 'edit'
+    end
   end
 
   def index

@@ -21,7 +21,7 @@ class UsersCreateTest < ActionDispatch::IntegrationTest
   																				password: "password",
   																				password_confirmation: "password" }
 		end
-		assert_template 'users/show'
+		assert_template 'users/index'
 		assert_not flash.empty?
 	end
 end
