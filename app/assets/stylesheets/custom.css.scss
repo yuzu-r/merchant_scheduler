@@ -22,17 +22,13 @@ body {
   padding-top: 30px;
 }
 
-merchant-table, th, td {
+merchant-table, td {
 	font-size: 14px;
 	float: left;
 }
 
-td, th {
+td {
 	border-bottom: 1px solid #ddd;
-}
-
-th {
-	width: 100%;
 }
 
 .center {
@@ -41,7 +37,7 @@ th {
 
 .merchant-action {
   width: 3em;
-  text-align: center;
+  text-align: left;
 }
 
 .merchant-name {
@@ -135,13 +131,4 @@ input {
   margin-left: 0;
 }
 
-/* Users index */
-.users {
-  list-style: none;
-  margin: 0;
-  li {
-    overflow: auto;
-    padding: 10px 0;
-    border-bottom: 1px solid $gray-lighter;
-  }
-}
+
