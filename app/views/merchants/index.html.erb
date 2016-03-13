@@ -2,7 +2,12 @@
   <p id="notice"><%= notice %></p>
 
   <h3>Merchant Admin</h3>
-
+    <div class="digg_pagination">
+      <div class="page_info" %>
+        <%= page_entries_info @merchants %>
+      </div>
+      <%= will_paginate @merchants, :container => false %>
+    </div>
     <table class="merchant-table">
     <thead>
       <td class="merchant-name">Merchant Name</td>
@@ -13,20 +18,15 @@
       <% @merchants.each do |merchant| %>
         <tr>
           <td class="merchant-name"><%= link_to "#{merchant.name}", merchant %></td>
-<!--           <td><div><span class="input-group-btn">
-            <button class="btn btn-default btn-sm"><i class="glyphicon glyphicon-pencil"></i>
-            </button>
-          </span>Edie</div></td>
-          <td><div><span class="input-group-btn">
-            <button class="btn btn-default btn-sm"><i class="glyphicon glyphicon-trash"></i>
-            </button>
-          </span></div></td> -->
           <td class = "merchant-action"><%= link_to 'Edit', edit_merchant_path(merchant) %></td>
           <td class = "merchant-action"><%= link_to 'Delete', merchant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
+    <div class="digg_pagination">
+      <%= will_paginate @merchants, :container => false %>
+    </div>
   <br>
 
 </div>
