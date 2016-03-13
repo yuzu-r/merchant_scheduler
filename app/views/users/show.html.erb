@@ -1,5 +1,12 @@
 <div class ="jumbotron">
 	<div class="container">
 		<%= @user.name %>, <%= @user.email %>
+		<% if @user.admin? %>
+			<p> I am an admin! </p>
+		<% else %>
+			<p> I am not an admin. </p>
+		<% end %>
 	</div>
+  <%= link_to 'Edit', edit_user_path(@user) %>  
+
 </div>

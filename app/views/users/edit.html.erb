@@ -2,7 +2,12 @@
 
 <div class ="jumbotron">
   <div class="container">
-    <h2>Edit A User</h2>
+
+    <% if @user == current_user %>
+      <h2>Edit My Account </h2>
+    <% else %>
+      <h2>Edit A User</h2>
+    <% end %>
 
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
@@ -15,14 +20,18 @@
           <%= f.label :email %>
           <%= f.email_field :email, class: 'form-control' %>
 
-          <%= f.label :password %>
-          <%= f.password_field :password, class: 'form-control' %>
+          <% if @user == current_user %>
+            <%= f.label :password %>
+            <%= f.password_field :password, class: 'form-control' %>
 
-          <%= f.label :password_confirmation, "Confirmation" %>
-          <%= f.password_field :password_confirmation, class: 'form-control' %>
+            <%= f.label :password_confirmation, "Confirmation" %>
+            <%= f.password_field :password_confirmation, class: 'form-control' %>
+          <% end %>
 
-          <%= f.label :admin, "Admin User?" %>
-          <%= f.check_box :admin %>
+          <% if current_user.admin? %>
+            <%= f.label :admin, "Admin User?" %>
+            <%= f.check_box :admin %>
+          <% end %>
 
           <%= f.submit "Save changes", class: "btn btn-primary" %>
         <% end %>

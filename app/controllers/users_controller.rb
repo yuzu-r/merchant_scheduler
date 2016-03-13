@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   end
 
   def show
-  	#@user = User.find(params[:id]) #this is now in before action?
+  	@user = User.find(params[:id]) #this is now in before action?
   end
 
   def create	 
