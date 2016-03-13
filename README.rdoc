@@ -2,3 +2,7 @@
 
 Scheduler
 
+Roll Credits.
+http://mislav.github.io/will_paginate/
+OneMonthRails
+Rails Tutorial by Michael Hartl
