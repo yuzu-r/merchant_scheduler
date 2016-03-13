@@ -5,28 +5,40 @@ ridiculous:
   email: fixt1@example.com
   password_digest: <%= User.digest('password') %>
   admin: true
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 sneaker:
   name: Second Tester
   email: sneak@example.com
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 ichiro:
   name: Ichiro Suzuki
   email: ichiro@example.com
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 threepio:
   name: C3PO
   email: c3po@example.com
   password_digest: <%= User.digest('password') %>  
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 artoo:
   name: R2D2
   email: r2d2@example.com
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 chewie:
   name: Chewbacca Wookiee
   email: chewie@example.com
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>

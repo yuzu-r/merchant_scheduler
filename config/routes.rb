@@ -8,5 +8,5 @@ Rails.application.routes.draw do
     
   resources :merchants
   resources :users
-
+  resources :account_activations, only: [:edit]
 end

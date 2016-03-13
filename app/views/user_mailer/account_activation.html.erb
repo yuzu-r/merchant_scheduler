@@ -1,0 +1,8 @@
+<h1>Merchant Scheduler</h1>
+
+<p>Hi <%= @user.name %>, </p>
+<p>
+  Your Merchant Scheduler account has been created. To begin making requests, activate your account by following the link below:
+</p>
+<%= link_to "Activate", edit_account_activation_url(@user.activation_token,
+                                                    email: @user.email) %>

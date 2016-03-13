@@ -10,7 +10,7 @@ class UsersIndexTest < ActionDispatch::IntegrationTest
     log_in_as(@user)
     get users_path
     assert_template 'users/index'
-    assert_select 'div.pagination'
+    assert_select 'div.digg_pagination'
     #this doesn't work due to my other links?
     #User.paginate(page: 1, per_page: 5).each do |user|
     #  assert_select 'a[href=?]', user_path(user), text: user.name
