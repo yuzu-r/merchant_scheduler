@@ -1,28 +1,30 @@
-<% provide(:title, 'Create User') %>
+<% provide(:title, 'New User') %>
 
 <div class ="jumbotron">
 	<div class="container">
-		<h2>Create a User</h2>
+		<h3>Create a New User</h3>
+	  <%= form_for(@user) do |f| %>
+			<%= render 'shared/error_messages' %>
+		    	
+	    <%= f.label :name %>
+	    <%= f.text_field :name %>
+
+	    <%= f.label :email %>
+	    <%= f.email_field :email %>
+
+	    <%= f.label :password %>
+	    <%= f.password_field :password %>
+
+	    <%= f.label :password_confirmation, "Confirmation" %>
+	    <%= f.password_field :password_confirmation %>
+
+	    <%= f.submit "Create user account", class: "btn btn-primary" %>
+  	<% end %>
 	</div>
-	<div class="row">
-	  <div class="col-md-6 col-md-offset-3">
-	    <%= form_for(@user) do |f| %>
-	    	<%= render 'shared/error_messages' %>
-	    	
-	      <%= f.label :name %>
-	      <%= f.text_field :name %>
+</div>
 
-	      <%= f.label :email %>
-	      <%= f.email_field :email %>
-
-	      <%= f.label :password %>
-	      <%= f.password_field :password %>
-
-	      <%= f.label :password_confirmation, "Confirmation" %>
-	      <%= f.password_field :password_confirmation %>
-
-	      <%= f.submit "Create user account", class: "btn btn-primary" %>
-	    <% end %>
-	  </div>
-	</div>
+<div class="footer-links">
+  <%= link_to users_path do %>
+    <span class="glyphicon glyphicon-arrow-left"></span> Return to User Admin
+  <% end %>
 </div>
