@@ -1,12 +1,28 @@
-
-<div class ="jumbotron">
-	<p id="notice"><%= notice %></p>
-
-	<p>
-	  <strong>Name:</strong>
-	  <%= @merchant.name %>
-	</p>
-
-	<%= link_to 'Edit', edit_merchant_path(@merchant) %> |
-	<%= link_to 'Back', merchants_path %>
+<% provide(:title, 'Merchant Profile') %>
+<div class ="jumbotron", id="merchant_tron">
+	<div class="container">
+		<p id="notice"><%= notice %></p>
+		<h3>Merchant Details</h3>
+		<form>
+			<div class="form-group">
+				<label>Name:</label>
+				<p class="form-control-static", id="myownp">
+					<%= @merchant.name %></p>
+			</div>
+		</form>
+	</div>
 </div>
+
+<div class="footer-links">
+	<%= link_to edit_merchant_path(@merchant) do %>
+  	<span class="glyphicon glyphicon-pencil"></span> Edit 
+	<% end %>	
+	|    
+	<%= link_to merchants_path do %>
+  	<span class="glyphicon glyphicon-arrow-left"></span> Return to Merchant Index
+	<% end %>
+</div>
+
+
+
+  

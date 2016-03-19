@@ -1,5 +1,5 @@
-
-<div class ="jumbotron">
+<% provide(:title, 'New Merchant') %>
+<div class ="jumbotron", id="merchant_tron">
 	<div class="container">
 		<h3>Add a New Merchant</h3>
 		<%= render 'form' %>
@@ -7,5 +7,8 @@
 </div>
 
 <div class="footer-links">
-	<%= link_to 'Back', merchants_path %>
+	<%= link_to merchants_path do %>
+  	<span class="glyphicon glyphicon-arrow-left"></span> Return to Merchant Index
+	<% end %>
 </div>
+

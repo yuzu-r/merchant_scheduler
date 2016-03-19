@@ -1,8 +1,8 @@
 
-<%= form_for(@merchant) do |f| %>
+<%= form_for @merchant do |f| %>
   <% if @merchant.errors.any? %>
     <div id="error_explanation">
-      <h3><%= pluralize(@merchant.errors.count, "error") %> prohibited this merchant from being saved:</h3>
+      <h4><%= pluralize(@merchant.errors.count, "error") %> prohibited this merchant from being saved:</h4>
       <ul>
       <% @merchant.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -18,15 +18,6 @@
   <div class="form-group">
     <%= f.submit "Submit", class: "btn btn-primary" %>
   </div>
-<!--     <label class="col-md-2 control-label" for="inputName" >Merchant Name</label>
-    <div class="col-md-6">
-      <input class="form-control" type="text" id="inputName" %>
-    </div>
-  
-    <div class="col-md-5">
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
- -->    
-  
+  </div>
 
 <% end %>
